@@ -12,7 +12,7 @@ body {
     font-size: 2rem;
     font-family:'Roboto', sans-serif;
     background-color: #FFFFFF;
-    width: 100%;
+    width: 100vw;
 }
 
 header {
@@ -61,15 +61,28 @@ li {
 
 .wrapper {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
-.page_content {
-    width: 100vw;
+
+/* Large screens */
+@media screen and (min-width: 1000px) {
+
+    main {
+        width: 80%;
+    }
 }
 
-/*Colour Scheme
+/* 
+    Placeholder reminder when it comes to adding buttons
+    make sure to support mouse & stylus users!
+
+@media screen and (pointer: fine) {
+} 
+*/
+
+/* Colour Scheme
 orange #D64405s
 blue #0B7384
 green #53A00A
