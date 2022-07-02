@@ -57,7 +57,7 @@ li {
 
 .wrapper > * {
     flex: 1 100%;
-  }
+}
 
 .wrapper {
     display: flex;
@@ -68,7 +68,6 @@ li {
 
 /* Large screens */
 @media screen and (min-width: 1000px) {
-
     main {
         width: 80%;
     }
