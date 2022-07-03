@@ -5,6 +5,7 @@
     --brand-green: #53A00A;
     --brand-dark-blue: #0E415A;
     --brand-grey: #808080;
+    --light-grey: #F2F2F2;
 }
 
 * {
@@ -54,33 +55,38 @@ label {
 ul {
     margin: 0, auto;
     list-style: none;
-    row-gap: 1px;
+    row-gap: 2px;
 }
 
 li {
     width: 100%;
     text-align: center;
     background-color: var(--brand-ocean-blue);
+    min-height: 63px;
+    color: #FFFFFF;
 }
 
 button, input {
-    appearance: none;
     border: none;
     background: none;
-    outline: none;
     color: #FFFFFF;
+    min-height: 63px;
 }
 
 input {
     padding: 1rem;
-    background-color: var(--brand-ocean-blue);;
+    background-color: var(--light-grey);
+    border: 1px solid var(--brand-grey);
+    color: var(--brand-dark-blue);
+    margin: 2px 0;
 }
 
 button {
     padding: 1rem 2rem;
+    margin-bottom: 2px;
 }
 
-#add-grocery-button {
+#add_grocery_button {
     background-color: var(--brand-green);
 }
 
@@ -97,7 +103,7 @@ button {
     flex-wrap: wrap;
 }
 
-.flex-container {
+.flex_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
