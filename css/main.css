@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+  
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2rem;
+    font-family:'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    width: 100vw;
+}
+
+header {
+    width: 100%;
+    padding: 2rem;
+}
+
+h1 {
+    margin: 4rem auto 1rem auto;
+    font-size: 8rem;
+    font-family: 'SpaceGrotesk', sans-serif;
+    font-weight: 800;
+    color:#808080;
+    text-align: center;
+}
+
+h2 {
+    margin: 1rem auto;
+    font-size: 4rem;
+    font-family: "Roboto Slab", Sans-serif;
+    font-weight: 300;
+    color:#D64405;
+    text-align: center;
+}
+
+ul {
+    margin: 0, auto;
+    list-style: none;
+    row-gap: 1px;
+}
+
+li {
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    background-color:#0B7384;
+}
+
+.grocery {
+    padding: 2rem 0;
+}
+
+.wrapper > * {
+    flex: 1 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Large screens */
+@media screen and (min-width: 1000px) {
+    main {
+        width: 80%;
+    }
+}
+
+/* 
+    Placeholder reminder when it comes to adding buttons
+    make sure to support mouse & stylus users!
+
+@media screen and (pointer: fine) {
+} 
+*/
+
+/* Colour Scheme
+orange #D64405s
+blue #0B7384
+green #53A00A
+dark blue #0E415A
+grey #808080
+*/
