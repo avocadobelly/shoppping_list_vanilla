@@ -1,3 +1,12 @@
+  /* Colour Scheme */
+:root {
+    --brand-orange: #D64405;
+    --brand-ocean-blue: #0B7384;
+    --brand-green: #53A00A;
+    --brand-dark-blue: #0E415A;
+    --brand-grey: #808080;
+}
+
 * {
     box-sizing: border-box;
     margin: 0 auto;
@@ -25,7 +34,7 @@ h1 {
     font-size: 8rem;
     font-family: 'SpaceGrotesk', sans-serif;
     font-weight: 800;
-    color:#808080;
+    color: var(--brand-grey);
     text-align: center;
 }
 
@@ -34,7 +43,7 @@ h2 {
     font-size: 4rem;
     font-family: "Roboto Slab", Sans-serif;
     font-weight: 300;
-    color:#D64405;
+    color:var(--brand-orange);;
     text-align: center;
 }
 
@@ -48,7 +57,28 @@ li {
     width: 100%;
     color: #FFFFFF;
     text-align: center;
-    background-color:#0B7384;
+    background-color: var(--brand-ocean-blue);
+}
+
+button, input {
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+input {
+    padding: 1rem;
+    background-color: var(--brand-ocean-blue);;
+}
+
+button {
+    padding: 1rem 2rem;
+}
+
+#add-grocery-button {
+    background-color: var(--brand-green);
+    color:#FFFFFF;
 }
 
 .grocery {
@@ -71,6 +101,10 @@ li {
     main {
         width: 80%;
     }
+
+    button, input {
+        border-radius: 5px;
+    }
 }
 
 /* 
@@ -79,12 +113,4 @@ li {
 
 @media screen and (pointer: fine) {
 } 
-*/
-
-/* Colour Scheme
-orange #D64405s
-blue #0B7384
-green #53A00A
-dark blue #0E415A
-grey #808080
 */
