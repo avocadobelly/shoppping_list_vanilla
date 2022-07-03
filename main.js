@@ -1,7 +1,21 @@
 // Dynamically create shopping list from local storage
 window.addEventListener('load', () => {
 
-    groceries = JSON.parse(localStorage.getItem('groceries')) || [];
+    initialArray = [{
+        'nameOfGrocery': 'peanuts',
+        'bought': false
+    }, {
+        'nameOfGrocery': 'bananas',
+        'bought': false
+    }, {
+        'nameOfGrocery': 'tea',
+        'bought': false
+    }, {
+        'nameOfGrocery': 'strawberries',
+        'bought': false
+    }];
+
+    groceries = JSON.parse(localStorage.getItem('groceries')) || initialArray;
 
     document.querySelector('form').addEventListener('submit', (e) => {
 
