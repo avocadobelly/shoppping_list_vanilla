@@ -10,20 +10,20 @@
         <link href="css/main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div id="wrapper">
+        <div class="wrapper flex-container">
             <header id="top">
                 <h1>Chopin</h1>
                 <h2>Grocery List Maker</h2>
             </header>
             <main>
                 <form action="/handle-user-input" method="post">
-                    <section> 
+                    <section class="flex-container"> 
                         <label for="add-grocery-textbox">Add a new grocery to the list</label>
-                        <input type="text" id="grocery-textbox" name="new-grocery" placeholder="eg: Pineapple">
+                        <input type="text" id="add-grocery-textbox" name="new-grocery" placeholder="eg: Pineapple">
                         <button type="submit" id="add-grocery-button">Add</button>
                     </section>
                     <section>
-                        <ul class="wrapper">
+                        <ul class="wrapper flex-container">
                             <li class="grocery">
                                 Banannas
                             </li>
