@@ -19,12 +19,12 @@
                 <form action="/handle-user-input" method="post">
                     <section class="flex-container"> 
                         <label for="add-grocery-textbox">Add a new grocery to the list</label>
-                        <input type="text" id="add-grocery-textbox" name="new-grocery" placeholder="eg: Pineapple">
+                        <input type="text" id="add-grocery-textbox" name="newGrocery" placeholder="eg: Pineapple">
                         <button type="submit" id="add-grocery-button">Add</button>
                     </section>
-                    <section>
-                        <ul class="wrapper flex-container">
-                            <li class="grocery">
+                    <section id="grocery-list-section">
+                        <ul class="wrapper flex-container" id="grocery-list">
+                            <!-- <li class="grocery">
                                 Banannas
                             </li>
                             <li class="grocery">
@@ -41,7 +41,7 @@
                             </li>
                             <li class="grocery">
                                 Vanilla
-                            </li>
+                            </li> -->
                         </ul>
                     </section>
                 </form>
