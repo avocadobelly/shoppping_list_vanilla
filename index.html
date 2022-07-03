@@ -16,26 +16,34 @@
                 <h2>Shopping List</h2>
             </header>
             <main>
-                <ul class="wrapper">
-                    <li class="grocery">
-                        Banannas
-                    </li>
-                    <li class="grocery">
-                        Pasta
-                    </li>
-                    <li class="grocery">
-                        Juice, all kinds: orange, apple, tropical, cranberry, apple and ginger, tomato!
-                    </li>
-                    <li class="grocery">
-                        Lettuce
-                    </li>
-                    <li class="grocery">
-                        Potatoes
-                    </li>
-                    <li class="grocery">
-                        Vanilla
-                    </li>
-                </ul>
+                <form action="/handle-user-input" method="post">
+                    <section> 
+                        <label for="add-grocery-textbox">Add a new grocery to the list
+                            <input type="text" id="grocery-textbox" name="new-grocery" placeholder="eg: Pineapple">
+                        </label>
+                        <button type="submit" id="add-grocery-button">Add</button>
+                    </section>
+                    <ul class="wrapper">
+                        <li class="grocery">
+                            Banannas
+                        </li>
+                        <li class="grocery">
+                            Pasta
+                        </li>
+                        <li class="grocery">
+                            Juice, all kinds: orange, apple, tropical, cranberry, apple and ginger, tomato!
+                        </li>
+                        <li class="grocery">
+                            Lettuce
+                        </li>
+                        <li class="grocery">
+                            Potatoes
+                        </li>
+                        <li class="grocery">
+                            Vanilla
+                        </li>
+                    </ul>
+                </form>
             </main>
             <footer></footer>
         </div>
