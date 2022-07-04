@@ -20,8 +20,9 @@ window.addEventListener('load', () => {
     document.querySelector('form').addEventListener('submit', (e) => {
 
         e.preventDefault();
-        alert('its working!');
-        addGrocery(e.target.elements.new_grocery.value, groceries);
+        let input = e.target.elements.new_grocery.value;
+        alert('Grocery added!');
+        addGrocery(input, groceries);
         e.target.reset();
         displayGroceryList(groceries);
 
@@ -56,6 +57,8 @@ function addGrocery(grocery, list) {
     localStorage.setItem('groceries', JSON.stringify(list));
 
 }
+
+// Messages
 
 // Validate input
 // Sanitise input
