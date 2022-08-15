@@ -21,7 +21,6 @@ window.addEventListener('load', () => {
 
         e.preventDefault();
         let input = e.target.elements.new_grocery.value;
-        alert('Grocery added!');
         addGrocery(input, groceries);
         e.target.reset();
         displayGroceryList(groceries);
@@ -40,10 +39,9 @@ function displayGroceryList(groceriesArray) {
     if (groceriesArray != []) {
 
         groceryListContainer.innerHTML += `<ul class="wrapper flex_container" id="grocery_list"></ul>`;
-        groceriesArray.forEach(grocery => {  
+        groceriesArray.forEach(grocery => {
             document.querySelector('#grocery_list').innerHTML += `<li class="grocery">${grocery.nameOfGrocery}</li>`;
         });
-
     }
 }
 
@@ -53,12 +51,30 @@ function addGrocery(grocery, list) {
         'nameOfGrocery': grocery,
         'bought': false
     }
-    list.push(newGrocery);
-    localStorage.setItem('groceries', JSON.stringify(list));
-
+    try {
+        list.push(newGrocery);
+        localStorage.setItem('groceries', JSON.stringify(list));
+        message('#add_grocery_message_container', 'success', 'New grocery added!');
+    } catch (error) {
+        console.log(error);
+        message('#add_grocery_message_container', 'failure', 'Something went wrong!');
+    }
 }
 
-// Messages
-
+function message(container, type, text) {
+    // find element on page
+    const messageContainer = document.querySelector(container);
+    // add styling to element based on type of message
+    if (messageContainer.classList.length === 1) {
+        messageContainer.classList.add(type);
+    } else if (type === 'success') {
+        messageContainer.classList.replace('failure', type);
+    } else {
+        messageContainer.classList.replace('success', type);
+    }
+    // add message text to element
+    messageContainer.innerText = text;
+}
 // Validate input
+
 // Sanitise input

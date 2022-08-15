@@ -109,6 +109,16 @@ button {
     justify-content: center;
 }
 
+.success {
+    color: var(--brand-green)
+}
+
+.failure {
+    color: red;
+}
+
+
+
 /* Large screens */
 @media screen and (min-width: 1000px) {
     main {
